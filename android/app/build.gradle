@@ -64,4 +64,10 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:32.6.0')
+    implementation 'com.google.firebase:firebase-appcheck-debug:17.1.2'
+}

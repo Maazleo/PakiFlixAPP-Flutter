@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1067481003172",
+    "project_id": "pakiflix-15d96",
+    "storage_bucket": "pakiflix-15d96.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067481003172:android:a6d5849aadb9a5f077a231",
+        "android_client_info": {
+          "package_name": "com.example.pakiflix"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRVXXl8dZiNby9-_4sjVsKXbYQUZhCmpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

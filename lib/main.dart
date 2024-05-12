@@ -3,16 +3,23 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'NewMovieScreen.dart';
 import 'detailmodal.dart';
 import 'my_list_page.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const PakiFlixApp());
 }
 
-class PakiFlixApp extends StatelessWidget {
+class PakiFlixApp extends StatefulWidget {
   const PakiFlixApp({super.key});
 
+  @override
+  State<PakiFlixApp> createState() => _PakiFlixAppState();
+}
+
+class _PakiFlixAppState extends State<PakiFlixApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -74,15 +81,24 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<void> _loadData() async {
+    final prefs = await SharedPreferences.getInstance();
     final String response = await rootBundle.loadString('assets/details.json');
     final data = await json.decode(response);
+
     setState(() {
       recent = List<Map<String, dynamic>>.from(data['recent']);
-      movies = List<Map<String, dynamic>>.from(data['movies']);
       webSeries = List<Map<String, dynamic>>.from(data['webSeries']);
       top10InPakistan = List<Map<String, dynamic>>.from(data['top10InPakistan']);
       details = Map<String, dynamic>.from(data['details']);
     });
+
+    // Load movies from SharedPreferences
+    final String? moviesJson = prefs.getString('movies');
+    if (moviesJson != null) {
+      setState(() {
+        movies = List<Map<String, dynamic>>.from(json.decode(moviesJson));
+      });
+    }
   }
 
   void _onItemTapped(int index) {
@@ -116,7 +132,11 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             title,
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+            style: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
         ),
         SizedBox(
@@ -186,7 +206,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      const Center(child: Text('Movies', style: TextStyle(color: Colors.white))),
+      CreateMovieScreen(updateMoviesCallback: _loadData), // Updated to include callback
       const MyListPage(), // My List Page
     ];
 
@@ -231,8 +251,8 @@ class _MyHomePageState extends State<MyHomePage> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.movie),
-            label: 'Movies',
+            icon: Icon(Icons.add),
+            label: 'Add New',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.list),

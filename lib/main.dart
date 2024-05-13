@@ -27,7 +27,7 @@ class _PakiFlixAppState extends State<PakiFlixApp> {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const SplashScreen(), // Set splash screen as home initially
+      home: const SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -38,9 +38,8 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Navigate to main screen after a delay
     Timer(
-      const Duration(seconds: 2), // Set the duration for splash screen display
+      const Duration(seconds: 2),
           () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const MyHomePage()),
@@ -48,10 +47,10 @@ class SplashScreen extends StatelessWidget {
     );
 
     return Scaffold(
-      backgroundColor: Colors.green, // Set your desired background color
+      backgroundColor: Colors.green,
       body: Center(
         child: Image.asset(
-          'assets/logo.png', // Your app logo or splash screen image
+          'assets/logo.png',
           fit: BoxFit.cover,
         ),
       ),
@@ -74,6 +73,11 @@ class _MyHomePageState extends State<MyHomePage> {
   List<Map<String, dynamic>> top10InPakistan = [];
   Map<String, dynamic> details = {};
 
+  final ScrollController _recentController = ScrollController();
+  final ScrollController _moviesController = ScrollController();
+  final ScrollController _webSeriesController = ScrollController();
+  final ScrollController _top10Controller = ScrollController();
+
   @override
   void initState() {
     super.initState();
@@ -92,7 +96,6 @@ class _MyHomePageState extends State<MyHomePage> {
       details = Map<String, dynamic>.from(data['details']);
     });
 
-    // Load movies from SharedPreferences
     final String? moviesJson = prefs.getString('movies');
     if (moviesJson != null) {
       setState(() {
@@ -124,7 +127,23 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Widget _buildRow(List<Map<String, dynamic>> items, String title) {
+  void _scrollLeft(ScrollController controller) {
+    controller.animateTo(
+      controller.offset - 200,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  void _scrollRight(ScrollController controller) {
+    controller.animateTo(
+      controller.offset + 200,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  Widget _buildRow(List<Map<String, dynamic>> items, String title, ScrollController controller) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -139,47 +158,62 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ),
-        SizedBox(
-          height: 200,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: items.length,
-            itemBuilder: (context, index) {
-              final item = items[index];
-              return GestureDetector(
-                onTap: () => _showDetails(context, item['title']),
-                child: Container(
-                  width: 120,
-                  margin: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Column(
-                    children: [
-                      Expanded(
-                        child: Image.network(
-                          item['image'],
-                          fit: BoxFit.cover,
-                          errorBuilder: (context, error, stackTrace) {
-                            return Container(
-                              color: Colors.grey,
-                              child: const Center(
-                                child: Icon(Icons.error, color: Colors.red),
+        Row(
+          children: [
+            IconButton(
+              icon: const Icon(Icons.arrow_back, color: Colors.white),
+              onPressed: () => _scrollLeft(controller),
+            ),
+            Expanded(
+              child: SizedBox(
+                height: 200,
+                child: ListView.builder(
+                  controller: controller,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: items.length,
+                  itemBuilder: (context, index) {
+                    final item = items[index];
+                    return GestureDetector(
+                      onTap: () => _showDetails(context, item['title']),
+                      child: Container(
+                        width: 120,
+                        margin: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Column(
+                          children: [
+                            Expanded(
+                              child: Image.network(
+                                item['image'],
+                                fit: BoxFit.cover,
+                                errorBuilder: (context, error, stackTrace) {
+                                  return Container(
+                                    color: Colors.grey,
+                                    child: const Center(
+                                      child: Icon(Icons.error, color: Colors.red),
+                                    ),
+                                  );
+                                },
                               ),
-                            );
-                          },
+                            ),
+                            const SizedBox(height: 5),
+                            Text(
+                              item['title'],
+                              style: const TextStyle(fontSize: 12, color: Colors.white),
+                              textAlign: TextAlign.center,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ],
                         ),
                       ),
-                      const SizedBox(height: 5),
-                      Text(
-                        item['title'],
-                        style: const TextStyle(fontSize: 12, color: Colors.white),
-                        textAlign: TextAlign.center,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ],
-                  ),
+                    );
+                  },
                 ),
-              );
-            },
-          ),
+              ),
+            ),
+            IconButton(
+              icon: const Icon(Icons.arrow_forward, color: Colors.white),
+              onPressed: () => _scrollRight(controller),
+            ),
+          ],
         ),
       ],
     );
@@ -199,15 +233,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 fit: BoxFit.cover,
               ),
             ),
-            _buildRow(recent, 'Recent'),
-            _buildRow(movies, 'Movies'),
-            _buildRow(webSeries, 'Web Series'),
-            _buildRow(top10InPakistan, 'Top 10 in Pakistan')
+            _buildRow(recent, 'Recent', _recentController),
+            _buildRow(webSeries, 'Web Series', _webSeriesController),
+            _buildRow(top10InPakistan, 'Top 10 in Pakistan', _top10Controller),
+            _buildRow(movies, 'Your Movies', _moviesController),
           ],
         ),
       ),
-      CreateMovieScreen(updateMoviesCallback: _loadData), // Updated to include callback
-      const MyListPage(), // My List Page
+      CreateMovieScreen(updateMoviesCallback: _loadData),
+      const MyListPage(),
     ];
 
     return Scaffold(
@@ -216,7 +250,8 @@ class _MyHomePageState extends State<MyHomePage> {
           'PakiFlix',
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 24,
+            fontSize: 30,
+            color: Colors.lightGreen
           ),
         ),
         backgroundColor: Colors.green[900],

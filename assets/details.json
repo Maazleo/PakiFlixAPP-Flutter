@@ -9,10 +9,6 @@
       "image": "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
     },
     {
-      "title": "Doctor Strange 2",
-      "image": "https://image.tmdb.org/t/p/w500/6EIIs4t5WdeWX6L4DK6ebNxeCQq.jpg"
-    },
-    {
       "title": "Uncharted",
       "image": "https://image.tmdb.org/t/p/w500/rJHC1RUORuUhtfNb4Npclx0xnOf.jpg"
     },
@@ -39,9 +35,33 @@
     {
       "title": "Top Gun: Maverick",
       "image": "https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg"
+    },
+    {
+      "title": "Pulp Fiction",
+      "image": "https://image.tmdb.org/t/p/w500/dM2w364MScsjFf8pfMbaWUcWrR.jpg"
+    },
+    {
+      "title": "Fight Club",
+      "image": "https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg"
+    },
+    {
+      "title": "Forrest Gump",
+      "image": "https://image.tmdb.org/t/p/w500/yE5d3BUhE8hCnkMUJOo1QDoOGNz.jpg"
+    },
+    {
+      "title": "The Matrix",
+      "image": "https://image.tmdb.org/t/p/w500/aOYI8jL9i70K0y65JKRQkRjBTSs.jpg"
+    },
+    {
+      "title": "The Shawshank Redemption",
+      "image": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg"
     }
   ],
   "movies": [
+    {
+      "title": "The Batman",
+      "image": "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+    },
     {
       "title": "Inception",
       "image": "https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg"
@@ -89,6 +109,10 @@
     {
       "title": "Fight Club",
       "image": "https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg"
+    },
+    {
+      "title": "Doctor Strange 2",
+      "image": "https://image.tmdb.org/t/p/w500/6EIIs4t5WdeWX6L4DK6ebNxeCQq.jpg"
     },
     {
       "title": "Forrest Gump",
@@ -163,9 +187,17 @@
     {
       "title": "Ozark",
       "image": "https://image.tmdb.org/t/p/w500/rlAbAIE8Qkn8SxSEFAGsE2Uuow2.jpg"
+    },
+    {
+      "title": "The Batman",
+      "image": "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg"
     }
   ],
   "top10InPakistan": [
+    {
+      "title": "The Shawshank Redemption",
+      "image": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg"
+    },
     {
       "title": "Money Heist",
       "image": "https://image.tmdb.org/t/p/w500/MoEKaPFHABtA1xKoOteirGaHl1.jpg"
@@ -177,14 +209,6 @@
     {
       "title": "Breaking Bad",
       "image": "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg"
-    },
-    {
-      "title": "The Witcher",
-      "image": "https://image.tmdb.org/t/p/w500/zrPpUlehQaBf8YX2NrVrKK8IEpf.jpg"
-    },
-    {
-      "title": "Stranger Things",
-      "image": "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"
     },
     {
       "title": "Game of Thrones",
@@ -201,6 +225,30 @@
     {
       "title": "Peaky Blinders",
       "image": "https://image.tmdb.org/t/p/w500/vVVHilmIaK5RpRmhVYYyLwtdF9g.jpg"
+    },
+    {
+      "title": "Pulp Fiction",
+      "image": "https://image.tmdb.org/t/p/w500/dM2w364MScsjFf8pfMbaWUcWrR.jpg"
+    },
+    {
+      "title": "Fight Club",
+      "image": "https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg"
+    },
+    {
+      "title": "Forrest Gump",
+      "image": "https://image.tmdb.org/t/p/w500/yE5d3BUhE8hCnkMUJOo1QDoOGNz.jpg"
+    },
+    {
+      "title": "The Matrix",
+      "image": "https://image.tmdb.org/t/p/w500/aOYI8jL9i70K0y65JKRQkRjBTSs.jpg"
+    },
+    {
+      "title": "The Witcher",
+      "image": "https://image.tmdb.org/t/p/w500/zrPpUlehQaBf8YX2NrVrKK8IEpf.jpg"
+    },
+    {
+      "title": "Stranger Things",
+      "image": "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"
     },
     {
       "title": "The Boys",
@@ -264,6 +312,14 @@
       "description": "In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society.",
       "img_link": "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"
     },
+    "Forrest Gump": {
+      "title": "Forrest Gump",
+      "year": "2019",
+      "genre": "Action, Adventure, Drama",
+      "imdb": 8.4,
+      "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins.",
+      "img_link": "https://image.tmdb.org/t/p/w500/yE5d3BUhE8hCnkMUJOo1QDoOGNz.jpg"
+    },
     "Avengers: Endgame": {
       "title": "Avengers: Endgame",
       "year": "2019",
@@ -295,6 +351,14 @@
       "imdb": 6.9,
       "description": "Anna, Elsa, Kristoff, Olaf, and Sven leave Arendelle to travel to an ancient, autumn-bound forest of an enchanted land.",
       "img_link": "https://image.tmdb.org/t/p/w500/lvQKClad8dWePPLtQjY1f4sMzhi.jpg"
+    },
+    "Fight Club": {
+      "title": "Fight Club",
+      "year": "2019",
+      "genre": "Animation, Adventure, Comedy",
+      "imdb": 6.9,
+      "description": "Anna, Elsa, Kristoff, Olaf, and Sven leave Arendelle to travel to an ancient, autumn-bound forest of an enchanted land.",
+      "img_link": "https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg"
     },
     "Black Widow": {
       "title": "Black Widow",
@@ -342,7 +406,7 @@
       "genre": "Action, Adventure, Sci-Fi",
       "imdb": 5.7,
       "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
-      "img_link": "https://image.tmdb.org/t/p/w500/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
+      "img_link": "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"
     },
     "Money Heist": {
       "title": "Money Heist",
@@ -351,13 +415,6 @@
       "imdb": 5.7,
       "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
       "img_link": "https://image.tmdb.org/t/p/w500/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
-    },    "Jurassic World Dominion": {
-      "title": "Jurassic World Dominion",
-      "year": "2022",
-      "genre": "Action, Adventure, Sci-Fi",
-      "imdb": 5.7,
-      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
-      "img_link": "https://image.tmdb.org/t/p/w500/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
     },
     "Jurassic World Dominion": {
       "title": "Jurassic World Dominion",
@@ -367,21 +424,141 @@
       "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
       "img_link": "https://image.tmdb.org/t/p/w500/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
     },
-    "Jurassic World Dominion": {
-      "title": "Jurassic World Dominion",
+    "Loki": {
+      "title": "Loki",
       "year": "2022",
       "genre": "Action, Adventure, Sci-Fi",
       "imdb": 5.7,
       "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
       "img_link": "https://image.tmdb.org/t/p/w500/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
     },
-    "Jurassic World Dominion": {
-      "title": "Jurassic World Dominion",
+    "WandaVision": {
+      "title": "WandaVision",
       "year": "2022",
       "genre": "Action, Adventure, Sci-Fi",
       "imdb": 5.7,
       "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
-      "img_link": "https://image.tmdb.org/t/p/w500/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
+      "img_link": "https://image.tmdb.org/t/p/w500/glKDfE6btIRcVB5zrjspRIs4r52.jpg"
+    },
+    "The Boys": {
+      "title": "The Boys",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/mY7SeH4HFFxW1hiI6cWuwCRKptN.jpg"
+    },
+    "Game of Thrones": {
+      "title": "Game of Thrones",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg"
+    },
+    "Peaky Blinders": {
+      "title": "Peaky Blinders",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/vVVHilmIaK5RpRmhVYYyLwtdF9g.jpg"
+    },
+    "The Crown": {
+      "title": "The Crown",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/vuqaiQuZ87dCD1zjqirfnC2ygf8.jpg"
+    },
+    "Squid Game": {
+      "title": "Squid Game",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg"
+    },
+    "Breaking Bad": {
+      "title": "The Boys",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg"
+    },
+    "Dark": {
+      "title": "Dark",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/1q1eAnFYrFZHE9tbW8Ix44e4pCo.jpg"
+    },
+    "Ozark": {
+      "title": "Ozark",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/rlAbAIE8Qkn8SxSEFAGsE2Uuow2.jpg"
+    },
+    "Top Gun: Maverick": {
+      "title": "Top Gun: Maverick",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg"
+    },
+    "Pulp Fiction": {
+      "title": "Pulp Fiction",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/dM2w364MScsjFf8pfMbaWUcWrR.jpg"
+    },
+    "Joker": {
+      "title": "Joker",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"
+    },
+    "Parasite": {
+      "title": "Parasite",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
+    },
+    "The Matrix": {
+      "title": "The Matrix",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/aOYI8jL9i70K0y65JKRQkRjBTSs.jpg"
+    },
+    "The Shawshank Redemption": {
+      "title": "The Shawshank Redemption",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg"
+    },
+    "The Mandalorian": {
+      "title": "The Mandalorian",
+      "year": "2022",
+      "genre": "Action, Adventure, Sci-Fi",
+      "imdb": 5.7,
+      "description": "Four years after the destruction of Isla Nublar, dinosaurs now live—and hunt—alongside humans all over the world.",
+      "img_link": "https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg"
     },
     "The Adam Project": {
       "title": "The Adam Project",

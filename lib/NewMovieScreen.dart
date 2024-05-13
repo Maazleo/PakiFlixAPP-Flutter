@@ -62,10 +62,10 @@ class _CreateMovieScreenState extends State<CreateMovieScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Add New Movie'),
-        backgroundColor: Colors.green[900],
+        backgroundColor: Colors.yellowAccent,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
             TextField(
@@ -75,7 +75,7 @@ class _CreateMovieScreenState extends State<CreateMovieScreen> {
                 border: OutlineInputBorder(),
               ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 14),
             TextField(
               controller: _imageController,
               decoration: const InputDecoration(
@@ -87,7 +87,7 @@ class _CreateMovieScreenState extends State<CreateMovieScreen> {
             ElevatedButton(
               onPressed: _addMovie,
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green[900],
+                backgroundColor: Colors.lightGreenAccent,
               ),
               child: const Text('Add Movie'),
             ),

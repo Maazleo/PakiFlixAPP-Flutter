@@ -5,7 +5,9 @@ import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'NewMovieScreen.dart';
 import 'detailmodal.dart';
+import 'login_screen.dart';
 import 'my_list_page.dart';
+import 'search_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -42,7 +44,7 @@ class SplashScreen extends StatelessWidget {
       const Duration(seconds: 2),
           () => Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const MyHomePage()),
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
       ),
     );
 
@@ -221,7 +223,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> _widgetOptions = <Widget>[
+    List<Widget> widgetOptions = <Widget>[
       SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -251,11 +253,20 @@ class _MyHomePageState extends State<MyHomePage> {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 30,
-            color: Colors.lightGreen
+            color: Colors.lightGreen,
           ),
         ),
         backgroundColor: Colors.green[900],
         actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.search, color: Colors.white),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SearchScreen()),
+              );
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.list, color: Colors.white),
             onPressed: () {
@@ -268,7 +279,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         color: Colors.black,
-        child: _widgetOptions.elementAt(_selectedIndex),
+        child: widgetOptions.elementAt(_selectedIndex),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
